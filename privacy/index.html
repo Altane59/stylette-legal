@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Stylette</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #FBF7F5; color: #1C1510; line-height: 1.7; }
+    .header { background: #fff; border-bottom: 1px solid #EDE5E0; padding: 16px 24px; }
+    .header-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .header h1 { font-size: 18px; font-weight: 700; }
+    .header a { color: #7A6A63; text-decoration: none; font-size: 14px; }
+    .header a:hover { color: #F4674A; }
+    .container { max-width: 680px; margin: 0 auto; padding: 48px 24px; }
+    h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    .updated { color: #7A6A63; font-size: 14px; margin-bottom: 40px; }
+    h3 { font-size: 18px; font-weight: 600; margin: 32px 0 12px; }
+    p { font-size: 16px; color: #1C1510; margin-bottom: 16px; }
+    ul { padding-left: 20px; margin-bottom: 16px; }
+    li { font-size: 16px; margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 15px; }
+    th { background: #fff; padding: 10px 12px; text-align: left; border: 1px solid #EDE5E0; font-weight: 600; color: #7A6A63; font-size: 13px; text-transform: uppercase; letter-spacing: 0.3px; }
+    td { padding: 10px 12px; border: 1px solid #EDE5E0; background: #fff; vertical-align: top; }
+    a { color: #F4674A; }
+    .highlight { background: #FFF0EB; border-left: 3px solid #F4674A; border-radius: 0 8px 8px 0; padding: 16px 20px; margin-bottom: 16px; }
+    .highlight p { margin-bottom: 0; }
+    .footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #EDE5E0; color: #7A6A63; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-inner">
+      <h1>Stylette</h1>
+      <a href="/stylette-legal/terms">Terms of Service →</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Privacy Policy</h2>
+    <p class="updated">Last updated: April 2026</p>
+
+    <h3>1. Who we are</h3>
+    <p>Stylette is operated by <strong>Altane</strong>, based in the United Kingdom. We are the data controller for any personal data collected through the Stylette app.</p>
+    <p>Contact: <a href="mailto:altanestudios@proton.me">altanestudios@proton.me</a></p>
+
+    <h3>2. What data we collect</h3>
+    <table>
+      <tr><th>Data</th><th>How</th><th>Why</th></tr>
+      <tr><td>Photo you upload</td><td>You choose it — sent once per analysis, never stored</td><td>To perform the AI style analysis</td></tr>
+      <tr><td>Style preferences (gender, age group, style goal)</td><td>Entered during onboarding, stored locally on your device</td><td>To personalise analysis results</td></tr>
+      <tr><td>App usage events (e.g. analysis started, paywall shown)</td><td>Firebase Analytics</td><td>To understand how the app is used and improve it</td></tr>
+      <tr><td>Crash reports and device info</td><td>Firebase Crashlytics</td><td>To identify and fix bugs</td></tr>
+      <tr><td>Subscription status</td><td>RevenueCat + Apple</td><td>To manage your Premium subscription</td></tr>
+    </table>
+    <p>We do <strong>not</strong> collect your name, email address, location, contacts, or any other personal identifier.</p>
+
+    <h3>3. Your photos</h3>
+    <div class="highlight">
+      <p>Your photo is <strong>never stored</strong> by Stylette on any server. It is sent securely (HTTPS) to our API proxy (Cloudflare), which forwards it to Anthropic's Claude AI for analysis. The photo is used once and immediately discarded — it is not saved, logged, or retained anywhere. EXIF metadata (GPS location, device model, timestamps) is stripped before the photo is sent.</p>
+    </div>
+
+    <h3>4. Third-party services</h3>
+    <table>
+      <tr><th>Service</th><th>Purpose</th><th>Data shared</th><th>Their policy</th></tr>
+      <tr><td><strong>Anthropic</strong></td><td>AI style analysis</td><td>Your photo + style preferences</td><td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td></tr>
+      <tr><td><strong>Cloudflare</strong></td><td>API proxy</td><td>Photo passes through in transit only</td><td><a href="https://www.cloudflare.com/privacypolicy" target="_blank">cloudflare.com/privacypolicy</a></td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>App usage analytics</td><td>Anonymous usage events, device type</td><td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>Crash reporting</td><td>Crash logs, device info</td><td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td></tr>
+      <tr><td><strong>RevenueCat</strong></td><td>Subscription management</td><td>Subscription status, anonymous user ID</td><td><a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></td></tr>
+      <tr><td><strong>Apple</strong></td><td>App distribution, payments</td><td>IAP transaction data</td><td><a href="https://www.apple.com/legal/privacy" target="_blank">apple.com/legal/privacy</a></td></tr>
+    </table>
+
+    <h3>5. How we use your data</h3>
+    <ul>
+      <li>To provide and improve the app</li>
+      <li>To process your subscription</li>
+      <li>To fix crashes and bugs</li>
+    </ul>
+    <p>We do <strong>not</strong> sell your data to any third party. We do <strong>not</strong> use your data for advertising.</p>
+
+    <h3>6. Data storage and retention</h3>
+    <ul>
+      <li><strong>Photos:</strong> never stored (see section 3)</li>
+      <li><strong>Style preferences:</strong> stored locally on your device only — we have no copy</li>
+      <li><strong>Analytics data:</strong> retained by Firebase per Google's standard retention policy</li>
+      <li><strong>Subscription data:</strong> retained by RevenueCat for billing purposes</li>
+    </ul>
+
+    <h3>7. Your rights under UK GDPR</h3>
+    <p>As a UK user you have the right to access, delete, port, correct, restrict, and object to processing of your personal data. To exercise any of these rights, contact <a href="mailto:altanestudios@proton.me">altanestudios@proton.me</a>.</p>
+    <p>Because we hold almost no personal data (no account system, no stored photos, preferences stored only on your device), most of these rights are satisfied automatically.</p>
+
+    <h3>8. Children</h3>
+    <p>Stylette is not directed at children under 13. We do not knowingly collect data from users under 13.</p>
+
+    <h3>9. Security</h3>
+    <p>All data in transit is encrypted via HTTPS/TLS. Your API key is never stored in the app — all Claude calls route through a secure Cloudflare proxy. We do not log or retain photo data at the proxy layer.</p>
+
+    <h3>10. Changes to this policy</h3>
+    <p>We will notify users of material changes via an in-app notice. Continued use after changes constitutes acceptance.</p>
+
+    <h3>11. Contact</h3>
+    <p><a href="mailto:altanestudios@proton.me">altanestudios@proton.me</a></p>
+
+    <div class="footer">
+      <p>Stylette is operated by Altane, United Kingdom. &copy; 2026 Altane. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
