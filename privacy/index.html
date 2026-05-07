@@ -38,7 +38,7 @@
 
   <div class="container">
     <h2>Privacy Policy</h2>
-    <p class="updated">Last updated: April 2026</p>
+    <p class="updated">Last updated: May 2026</p>
 
     <h3>1. Who we are</h3>
     <p>Stylette is operated by <strong>Altane</strong>, based in the United Kingdom. We are the data controller for any personal data collected through the Stylette app.</p>
@@ -52,20 +52,21 @@
       <tr><td>App usage events (e.g. analysis started, paywall shown)</td><td>Firebase Analytics</td><td>To understand how the app is used and improve it</td></tr>
       <tr><td>Crash reports and device info</td><td>Firebase Crashlytics</td><td>To identify and fix bugs</td></tr>
       <tr><td>Subscription status</td><td>RevenueCat + Apple</td><td>To manage your Premium subscription</td></tr>
+      <tr><td>Anonymous device ID (UUID)</td><td>Generated on first launch, stored in your iOS Keychain</td><td>To enforce free-tier weekly limits server-side without requiring an account</td></tr>
     </table>
-    <p>We do <strong>not</strong> collect your name, email address, location, contacts, or any other personal identifier.</p>
+    <p>We do <strong>not</strong> collect your name, email address, location, or contacts. The only identifier we hold is the anonymous device UUID described above, used solely to enforce the free-tier weekly limit. It is not linked to any other personal data.</p>
 
     <h3>3. Your photos</h3>
     <div class="highlight">
-      <p>Your photo is <strong>never stored</strong> by Stylette on any server. It is sent securely (HTTPS) to our API proxy (Cloudflare), which forwards it to Anthropic's Claude AI for analysis. The photo is used once and immediately discarded — it is not saved, logged, or retained anywhere. EXIF metadata (GPS location, device model, timestamps) is stripped before the photo is sent.</p>
+      <p>Your photo is <strong>not stored on Stylette's servers</strong>. It is sent over HTTPS through our API proxy (Cloudflare) to Anthropic's Claude AI for analysis, used once, and discarded by Stylette immediately. EXIF metadata (GPS location, device model, timestamps) is stripped before the photo leaves your device. Anthropic processes the image to produce the analysis and, per their <a href="https://www.anthropic.com/privacy" target="_blank">data policy</a>, may retain API inputs for up to 30 days for safety and abuse-detection purposes. Stylette does not have a zero-retention arrangement with Anthropic.</p>
     </div>
 
     <h3>4. Third-party services</h3>
     <table>
       <tr><th>Service</th><th>Purpose</th><th>Data shared</th><th>Their policy</th></tr>
-      <tr><td><strong>Anthropic</strong></td><td>AI style analysis</td><td>Your photo + style preferences</td><td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td></tr>
-      <tr><td><strong>Cloudflare</strong></td><td>API proxy</td><td>Photo passes through in transit only</td><td><a href="https://www.cloudflare.com/privacypolicy" target="_blank">cloudflare.com/privacypolicy</a></td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>App usage analytics</td><td>Anonymous usage events, device type</td><td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td></tr>
+      <tr><td><strong>Anthropic</strong></td><td>AI style analysis</td><td>Your photo + style preferences. Anthropic may retain API inputs for up to 30 days for safety and abuse review per their data policy.</td><td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td></tr>
+      <tr><td><strong>Cloudflare</strong></td><td>API proxy</td><td>Your photo passes through in transit. Cloudflare's edge platform retains standard request metadata (IP address, country, user-agent, request paths) for operational purposes. An anonymous weekly usage counter keyed to your device UUID is held in Cloudflare KV with a 14-day expiry.</td><td><a href="https://www.cloudflare.com/privacypolicy" target="_blank">cloudflare.com/privacypolicy</a></td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>App usage analytics</td><td>Pseudonymous app instance ID, event names, device type, IP-derived approximate location</td><td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Crash reporting</td><td>Crash logs, device info</td><td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td></tr>
       <tr><td><strong>RevenueCat</strong></td><td>Subscription management</td><td>Subscription status, anonymous user ID</td><td><a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></td></tr>
       <tr><td><strong>Apple</strong></td><td>App distribution, payments</td><td>IAP transaction data</td><td><a href="https://www.apple.com/legal/privacy" target="_blank">apple.com/legal/privacy</a></td></tr>
@@ -85,20 +86,21 @@
       <li><strong>Style preferences:</strong> stored locally on your device only — we have no copy</li>
       <li><strong>Analytics data:</strong> retained by Firebase per Google's standard retention policy</li>
       <li><strong>Subscription data:</strong> retained by RevenueCat for billing purposes</li>
+      <li><strong>Anonymous device UUID:</strong> stored on your device until you tap "Delete my data" in Profile or uninstall the app. The corresponding server-side weekly usage counter (in Cloudflare KV) expires automatically within 14 days.</li>
     </ul>
 
     <h3>7. Your rights under UK GDPR</h3>
     <p>As a UK user you have the right to access, delete, port, correct, restrict, and object to processing of your personal data. To exercise any of these rights, contact <a href="mailto:altanestudios@proton.me">altanestudios@proton.me</a>.</p>
-    <p>Because we hold almost no personal data (no account system, no stored photos, preferences stored only on your device), most of these rights are satisfied automatically.</p>
+    <p>Because we hold almost no personal data — no account system, no stored photos, preferences and history stored only on your device — most rights are satisfied automatically. Tapping <strong>Delete my data</strong> in the Profile screen wipes all locally-stored data including your anonymous device UUID. The corresponding server-side rate-limit counter is then orphaned with no way to link it to you, and expires within 14 days.</p>
 
     <h3>8. Children</h3>
-    <p>Stylette is not directed at children under 13. We do not knowingly collect data from users under 13.</p>
+    <p>Stylette is intended for users aged 13 and older. We do not knowingly collect personal data from children under 13. If we become aware that we have inadvertently collected such data, we will delete it promptly.</p>
 
     <h3>9. Security</h3>
-    <p>All data in transit is encrypted via HTTPS/TLS. Your API key is never stored in the app — all Claude calls route through a secure Cloudflare proxy. We do not log or retain photo data at the proxy layer.</p>
+    <p>All data in transit is encrypted via HTTPS/TLS. Your API key is never stored in the app — all Claude calls route through a secure Cloudflare proxy. Stylette's proxy code does not log or retain photo data. Cloudflare's underlying edge platform retains standard request metadata (IP, country, user-agent, request paths) for operational purposes per Cloudflare's policy.</p>
 
     <h3>10. Changes to this policy</h3>
-    <p>We will notify users of material changes via an in-app notice. Continued use after changes constitutes acceptance.</p>
+    <p>We may update this privacy policy from time to time. The current version is always available at this URL, and the "Last updated" date at the top will reflect any changes. We encourage you to review the policy periodically.</p>
 
     <h3>11. Contact</h3>
     <p><a href="mailto:altanestudios@proton.me">altanestudios@proton.me</a></p>
