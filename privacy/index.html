@@ -38,7 +38,7 @@
 
   <div class="container">
     <h2>Privacy Policy</h2>
-    <p class="updated">Last updated: May 2026</p>
+    <p class="updated">Last updated: 19 May 2026</p>
 
     <h3>1. Who we are</h3>
     <p>Stylette is operated by <strong>Altane</strong>, based in the United Kingdom. We are the data controller for any personal data collected through the Stylette app.</p>
@@ -86,12 +86,12 @@
       <li><strong>Style preferences:</strong> stored locally on your device only — we have no copy</li>
       <li><strong>Analytics data:</strong> retained by Firebase per Google's standard retention policy</li>
       <li><strong>Subscription data:</strong> retained by RevenueCat for billing purposes</li>
-      <li><strong>Anonymous device UUID:</strong> stored on your device until you tap "Delete my data" in Profile or uninstall the app. The corresponding server-side weekly usage counter (in Cloudflare KV) expires automatically within 14 days.</li>
+      <li><strong>Anonymous device UUID:</strong> stored in your device's Keychain. It is <strong>not</strong> removed by "Delete my data" — it holds no personal data and is retained so the free-tier limit cannot be bypassed by repeatedly deleting data. The corresponding server-side weekly usage counter (in Cloudflare KV) expires automatically within 14 days.</li>
     </ul>
 
     <h3>7. Your rights under UK GDPR</h3>
     <p>As a UK user you have the right to access, delete, port, correct, restrict, and object to processing of your personal data. To exercise any of these rights, contact <a href="mailto:altanestudios@proton.me">altanestudios@proton.me</a>.</p>
-    <p>Because we hold almost no personal data — no account system, no stored photos, preferences and history stored only on your device — most rights are satisfied automatically. Tapping <strong>Delete my data</strong> in the Profile screen wipes all locally-stored data including your anonymous device UUID. The corresponding server-side rate-limit counter is then orphaned with no way to link it to you, and expires within 14 days.</p>
+    <p>Because we hold almost no personal data — no account system, no stored photos, preferences and history stored only on your device — most rights are satisfied automatically. Tapping <strong>Delete my data</strong> in the Profile screen wipes all locally-stored data from your device: your style profile, onboarding preferences, saved analyses, and your current weekly usage mirror. To prevent abuse of the free tier, the anonymous weekly usage counter held server-side in Cloudflare KV is preserved until it automatically expires within 14 days, and the anonymous device identifier in your device's Keychain is retained. Both are anonymous, are not linked to any other personal data, and cannot be used to identify you.</p>
 
     <h3>8. Children</h3>
     <p>Stylette is intended for users aged 13 and older. We do not knowingly collect personal data from children under 13. If we become aware that we have inadvertently collected such data, we will delete it promptly.</p>
